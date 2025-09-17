@@ -208,3 +208,24 @@ This module builds advanced SOC skills:
 ---
 
 **[← Back to Main Tutorial](../README.md)** | **[Next: Suricata Integration →](./theory/01-suricata-integration.md)**
+
+---
+
+## 📖 Module Content Navigation
+
+### Theory Sections
+1. **[Suricata Integration](./theory/01-suricata-integration.md)** - Network IDS integration with Wazuh
+2. **[ELK Stack Integration](./theory/03-elk-stack-integration.md)** - Elasticsearch, Logstash, Kibana setup and configuration
+3. **[Threat Intelligence Integration](./theory/04-threat-intelligence-integration.md)** - MISP and VirusTotal integration
+4. **[Incident Response Integration](./theory/05-incident-response-integration.md)** - TheHive case management and workflows
+
+### Hands-on Labs
+1. **[Lab 2: ELK Stack Setup](./labs/lab-02-elk-stack-setup.md)** - Complete ELK Stack deployment and Wazuh integration
+2. **[Lab 3: MISP Integration](./labs/lab-03-misp-integration.md)** - Threat intelligence platform setup and enrichment
+3. **[Lab 4: TheHive Workflow](./labs/lab-04-thehive-workflow.md)** - Incident response case management integration
+4. **[Lab 5: Comprehensive SOC Stack](./labs/lab-05-comprehensive-soc-stack.md)** - Unified SOC environment with all integrations
+
+### Reference Materials
+- **[Integration Architectures](./resources/integration-architectures.md)** - Design patterns and best practices
+- **[API Reference Guide](./resources/api-reference-guide.md)** - Complete API documentation for all tools
+- **[Automation Playbooks](./resources/automation-playbooks.md)** - Ready-to-use automation workflows
