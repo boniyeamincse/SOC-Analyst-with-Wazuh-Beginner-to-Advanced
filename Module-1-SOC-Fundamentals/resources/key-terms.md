@@ -175,6 +175,10 @@ A technology stack that enables organizations to collect security data and autom
 
 Test your knowledge by covering the definitions and trying to recall or explain each term. Focus on understanding how these concepts relate to each other and real-world applications.
 
+## 🔗 Next Steps
+
+**[← Back: Troubleshooting →](../labs/lab-04-troubleshooting.md)** | **[Next: Further Reading →](./further-reading.md)**
+
 ---
 
 *Mastering these terms will give you a solid foundation for advanced SOC concepts and practical implementation.*
