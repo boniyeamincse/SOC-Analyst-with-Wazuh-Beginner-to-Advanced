@@ -250,6 +250,68 @@ A multi-layered security approach:
 5. **Metrics and KPIs** help measure SOC effectiveness
 6. **Adaptation** is key to addressing evolving threats
 
+## 📄 Original Source Content from data.txt
+
+### What is SOC?
+```
+=============
+What is SOC ?
+=============
+
+=> SOC stands for Security Operations Center.
+=> It is a centralized team and facility that monitors, detects, prevents, and responds to cybersecurity incidents.
+=> The main goal of SOC is to protect organizational IT systems, networks, applications, and data from cyber threats.
+=> SOC operates 24/7 to ensure continuous security monitoring and quick incident response.
+
+=> It combines People (security analysts), Processes (incident handling), and Technology (SIEM, IDS/IPS, Firewalls, EDR).
+
+=> Types of SOC:
+   - In-house SOC
+   - Managed SOC (MSSP)
+   - Hybrid SOC
+```
+
+### Security Operations Basics
+```
+========================
+Security Operations Basics
+========================
+
+=> Security Operations (SecOps) refers to the processes and services that ensure an organization's information systems are protected from cyber threats.
+
+=> It involves monitoring, detecting, analyzing, and responding to security incidents.
+
+=> Security Operations combines people, processes, and technology to maintain confidentiality, integrity, and availability (CIA triad) of data.
+
+=> Core functions of Security Operations:
+   - Threat Detection
+   - Incident Response
+   - Vulnerability Management
+   - Log Analysis & Monitoring
+   - Threat Intelligence
+   - Compliance & Reporting
+
+=> Tools commonly used:
+   - SIEM (Security Information & Event Management)
+   - IDS/IPS (Intrusion Detection/Prevention Systems)
+   - Firewalls & EDR (Endpoint Detection & Response)
+   - Threat Intelligence Platforms
+
+=> Security Operations is usually handled in a SOC (Security Operations Center) with dedicated security teams.
+
+=> Benefits:
+   - Continuous 24/7 monitoring
+   - Early detection of threats
+   - Faster incident response
+   - Reduced risk of data breaches
+   - Compliance with security regulations
+
+=> Challenges:
+   - Alert fatigue due to high volume of logs
+   - Shortage of skilled cybersecurity professionals
+   - Rapidly evolving cyber-attack techniques
+```
+
 ## 📚 Self-Assessment Questions
 
 1. What are the three core components of a SOC?
