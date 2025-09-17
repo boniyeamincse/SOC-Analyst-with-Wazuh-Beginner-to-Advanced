@@ -1,0 +1,826 @@
+=======================================================
+SOC Analyst with Wazuh – Beginner to Advanced
+========================================================
+
+🔹 Module 1: SOC & Wazuh Fundamentals (1–10)
+1.	What is a SOC? Security Operations Basics
+2.	Role of SIEM in SOC Operations
+3.	Wazuh Introduction – Why It’s a Powerful SIEM
+4.	Wazuh Architecture Explained (Manager, Agent, Indexer, Dashboard)
+5.      OS Selection for Wazuh
+
+=============
+What is SOC ?
+=============
+
+=> SOC stands for Security Operations Center.
+=> It is a centralized team and facility that monitors, detects, prevents, and responds to cybersecurity incidents.
+=> The main goal of SOC is to protect organizational IT systems, networks, applications, and data from cyber threats.
+=> SOC operates 24/7 to ensure continuous security monitoring and quick incident response.
+
+=> It combines People (security analysts), Processes (incident handling), and Technology (SIEM, IDS/IPS, Firewalls, EDR).
+
+=> Types of SOC:
+   - In-house SOC
+   - Managed SOC (MSSP)
+   - Hybrid SOC
+
+
+========================
+Security Operations Basics
+========================
+
+=> Security Operations (SecOps) refers to the processes and services that ensure an organization’s information systems are protected from cyber threats.
+
+=> It involves monitoring, detecting, analyzing, and responding to security incidents.
+
+=> Security Operations combines people, processes, and technology to maintain confidentiality, integrity, and availability (CIA triad) of data.
+
+=> Core functions of Security Operations:
+   - Threat Detection
+   - Incident Response
+   - Vulnerability Management
+   - Log Analysis & Monitoring
+   - Threat Intelligence
+   - Compliance & Reporting
+
+=> Tools commonly used:
+   - SIEM (Security Information & Event Management)
+   - IDS/IPS (Intrusion Detection/Prevention Systems)
+   - Firewalls & EDR (Endpoint Detection & Response)
+   - Threat Intelligence Platforms
+
+=> Security Operations is usually handled in a SOC (Security Operations Center) with dedicated security teams.
+
+=> Benefits:
+   - Continuous 24/7 monitoring
+   - Early detection of threats
+   - Faster incident response
+   - Reduced risk of data breaches
+   - Compliance with security regulations
+
+=> Challenges:
+   - Alert fatigue due to high volume of logs
+   - Shortage of skilled cybersecurity professionals
+   - Rapidly evolving cyber-attack techniques
+
+
+
+===================================
+Role of SIEM in SOC Operations
+===================================
+
+=> SIEM stands for Security Information and Event Management.
+
+=> It is a software solution that collects, normalizes, and analyzes security logs and events from multiple sources across the organization.
+
+=> In SOC operations, SIEM acts as the central nervous system for monitoring and detecting threats.
+
+=> Key roles of SIEM in SOC:
+   - Log Collection: Aggregates logs from servers, firewalls, applications, and endpoints.
+   - Log Correlation: Connects related events to detect suspicious activities.
+   - Real-Time Monitoring: Provides alerts for anomalies and potential cyberattacks.
+   - Incident Detection: Identifies threats like malware, phishing, brute force, insider threats.
+   - Incident Response Support: Supplies detailed forensic data for investigations.
+   - Compliance Reporting: Helps organizations meet regulations (e.g., GDPR, PCI-DSS, HIPAA).
+   - Dashboards & Visualization: Gives SOC analysts a clear view of network security status.
+
+=> Benefits of using SIEM in SOC:
+   - Faster detection of security incidents
+   - Centralized monitoring across the IT environment
+   - Reduced false positives with correlation rules
+   - Improves efficiency of SOC analysts
+   - Ensures regulatory compliance
+
+=> Without SIEM, SOC operations would struggle to handle large volumes of logs and detect complex attacks effectively.
+
+=============
+What is Wazuh ?
+=============
+
+=> Wazuh is a free and open-source Security Information and Event Management (SIEM) platform.  
+
+=> It is used for threat detection, incident response, compliance monitoring, and security visibility.  
+
+=> Wazuh collects, analyzes, and correlates logs from servers, endpoints, cloud environments, and applications.  
+
+=> It provides real-time monitoring and alerts for suspicious activities.  
+
+=> Key Features:
+   - Log data collection and analysis
+   - Intrusion Detection (IDS/IPS)
+   - File Integrity Monitoring (FIM)
+   - Vulnerability Detection
+   - Security Configuration Assessment
+   - Threat Intelligence Integration
+   - Compliance Reporting (PCI-DSS, GDPR, HIPAA, etc.)
+
+=> Wazuh uses agents installed on endpoints to collect security data, and a central server to process and analyze it.  
+
+=> It integrates with tools like **Elastic Stack (Elasticsearch, Logstash, Kibana)** and **OpenSearch** for data storage, search, and visualization.  
+
+=> Wazuh helps SOC teams detect threats faster, respond effectively, and maintain regulatory compliance.  
+
+=> It is widely used by enterprises, governments, and security professionals for security monitoring.  
+
+
+
+===========================
+Wazuh Architecture Basics
+===========================
+
+=> Wazuh architecture is designed to collect, analyze, and visualize security data from multiple sources.  
+
+=> It consists of different components that work together to provide monitoring, detection, and response.  
+
+=> Main Components of Wazuh Architecture:  
+
+   1. **Wazuh Agents**  
+      - Installed on endpoints (servers, desktops, cloud, containers).  
+      - Collect log data, monitor file integrity, detect vulnerabilities.  
+      - Send data securely to the Wazuh Server/Manager.  
+
+   2. **Wazuh Server (Manager)**  
+      - Core component that receives data from agents.  
+      - Performs log analysis, rule correlation, and threat detection.  
+      - Generates alerts for suspicious activities.  
+
+   3. **Indexer (Elasticsearch / OpenSearch)**  
+      - Stores and indexes the processed security data.  
+      - Allows fast searching and querying of logs.  
+
+   4. **Dashboard (Kibana / OpenSearch Dashboards)**  
+      - Web interface for visualization and monitoring.  
+      - Provides graphs, charts, and dashboards for SOC teams.  
+      - Helps in incident investigation and compliance reporting.  
+
+   5. **Wazuh API**  
+      - Provides programmatic access to Wazuh data.  
+      - Enables integration with other security tools and automation.  
+
+=> Workflow:  
+   - Wazuh Agent → Wazuh Server → Indexer → Dashboard  
+
+=> This architecture allows centralized security monitoring, real-time threat detection, and better visibility into IT infrastructure.  
+
+
+
+===========================
+Key Use Cases of Wazuh
+===========================
+
+=> Wazuh is a versatile open-source SIEM platform that can be used in various cybersecurity and compliance scenarios.  
+
+=> Main Use Cases of Wazuh:  
+
+   1. **Threat Detection & Incident Response**  
+      - Detects malware, brute force attacks, suspicious logins, and insider threats.  
+      - Provides alerts and forensic data to help SOC teams respond quickly.  
+
+   2. **Vulnerability Detection**  
+      - Scans endpoints and servers for software vulnerabilities.  
+      - Integrates with vulnerability feeds to identify outdated or misconfigured software.  
+
+   3. **File Integrity Monitoring (FIM)**  
+      - Monitors changes in critical system files and directories.  
+      - Detects unauthorized modifications, deletions, or additions.  
+
+   4. **Intrusion Detection (IDS/IPS)**  
+      - Analyzes network and system logs for intrusion attempts.  
+      - Detects suspicious patterns like port scanning or privilege escalation.  
+
+   5. **Compliance Monitoring**  
+      - Helps organizations meet requirements for PCI-DSS, HIPAA, GDPR, ISO 27001, and more.  
+      - Provides compliance dashboards and reports.  
+
+   6. **Cloud Security Monitoring**  
+      - Monitors cloud platforms (AWS, Azure, GCP) for misconfigurations and suspicious activities.  
+      - Detects unauthorized access and policy violations.  
+
+   7. **Endpoint & Server Monitoring**  
+      - Tracks user activities, system performance, and security logs on endpoints and servers.  
+      - Detects anomalies and insider threats.  
+
+   8. **Log Management & Correlation**  
+      - Collects logs from multiple sources (OS, applications, firewalls, IDS/IPS, databases).  
+      - Correlates events to identify advanced threats.  
+
+=> Wazuh provides an all-in-one solution for SOC operations, making it a powerful tool for cybersecurity, compliance, and system monitoring.  
+
+
+===================================================
+Wazuh vs Other SIEM Tools (Splunk, QRadar, Elastic SIEM)
+===================================================
+
+=> Wazuh is an open-source SIEM platform, while Splunk, QRadar, and Elastic SIEM are commercial or enterprise-focused solutions.  
+
+=> Comparison based on key factors:  
+
+1. **Cost**  
+   - **Wazuh:** Free and open-source, minimal licensing cost.  
+   - **Splunk:** Expensive, based on data ingestion volume.  
+   - **QRadar:** High licensing cost, tailored for enterprises.  
+   - **Elastic SIEM:** Free open-source version available; paid tiers for enterprise features.  
+
+2. **Ease of Deployment**  
+   - **Wazuh:** Can be complex initially but flexible; integrates with Elastic Stack.  
+   - **Splunk:** Easy to deploy; strong ecosystem and support.  
+   - **QRadar:** Enterprise-grade deployment; may require professional setup.  
+   - **Elastic SIEM:** Easy with Elastic Stack; good documentation.  
+
+3. **Features**  
+   - **Wazuh:** Log collection, FIM, IDS, vulnerability detection, compliance, cloud monitoring.  
+   - **Splunk:** Advanced log analytics, dashboards, correlation, machine learning, alerts.  
+   - **QRadar:** Centralized logging, threat detection, correlation, compliance reporting.  
+   - **Elastic SIEM:** Log analysis, visualization, detection rules, open-source extensibility.  
+
+4. **Scalability**  
+   - **Wazuh:** Scalable but depends on Elastic Stack infrastructure.  
+   - **Splunk:** Highly scalable for large enterprises.  
+   - **QRadar:** Enterprise-grade scalability.  
+   - **Elastic SIEM:** Scalable with Elastic Stack cluster setup.  
+
+5. **Community & Support**  
+   - **Wazuh:** Strong open-source community, free support forums.  
+   - **Splunk:** Large user community, enterprise support.  
+   - **QRadar:** IBM enterprise support, smaller community.  
+   - **Elastic SIEM:** Active community, enterprise support available.  
+
+6. **Use Cases**  
+   - **Wazuh:** SMBs, open-source enthusiasts, SOC monitoring, compliance.  
+   - **Splunk:** Enterprises needing advanced analytics, big data integration.  
+   - **QRadar:** Large enterprises with high-security needs.  
+   - **Elastic SIEM:** Organizations needing customizable, open-source log management.  
+
+=> **Summary:**  
+   - Wazuh is ideal for cost-effective, open-source security monitoring and compliance.  
+   - Splunk and QRadar are enterprise-grade with advanced analytics but high cost.  
+   - Elastic SIEM offers flexibility and visualization for organizations using Elastic Stack. 
+
+=========================
+OS Selection for Wazuh
+=========================
+
+=> Wazuh can be installed on different operating systems, but selecting the right OS is important for performance, stability, and security.  
+
+=> Recommended OS for Wazuh Server (Manager):  
+- Linux-based OS is preferred for Wazuh server due to stability and compatibility.  
+- Popular choices:  
+  - Ubuntu LTS (20.04, 22.04)  
+  - Debian (10, 11)  
+  - CentOS / Rocky Linux / AlmaLinux (8, 9)  
+  - RHEL (8, 9)  
+
+=> Recommended OS for Wazuh Agents:  
+- Wazuh agents can run on multiple OS types:  
+  - Linux (Ubuntu, Debian, CentOS, RHEL)  
+  - Windows (Windows 10, 11, Windows Server 2016/2019/2022)  
+  - macOS  
+  - Cloud platforms (AWS EC2, Azure VM, GCP Compute Engine)  
+
+=> Factors to Consider for OS Selection:  
+- Stability: LTS (Long-Term Support) versions are preferred.  
+- Security: Regular patch updates and security support.  
+- Compatibility: Wazuh integrates well with Elastic Stack on Linux.  
+- Performance: Linux generally provides better performance for Wazuh Manager and indexing services.  
+- Support: Choose an OS that your team can manage and maintain.  
+
+=> Not Recommended:  
+- Older, unsupported OS versions.  
+- Non-Linux OS for large-scale Wazuh Server deployment due to potential compatibility and performance issues.  
+
+=> Summary:  
+- Wazuh Server: Prefer Linux LTS distributions for production.  
+- Wazuh Agent: Flexible, supports Linux, Windows, macOS, and cloud environments.  
+ 
+ 
+wazuh Unified XDR and SIEM protection for endpoints
+and cloud workloads
+=======================================================
+
+===> Endpoint Security --> 
+===> Threat Intelligence
+===> Security Operations
+===> Cloud Security
+
+=============
+Endpoint Security
+=============
+
+=> Endpoint Security refers to the protection of endpoints like desktops, laptops, servers, and mobile devices from cyber threats.  
+
+=> It ensures that each device connected to the network is secure and monitored for malicious activities.  
+
+=> Key Components of Endpoint Security:  
+- Antivirus / Anti-malware: Detects and removes malicious software.  
+- Endpoint Detection & Response (EDR): Monitors endpoints for suspicious activity and responds in real-time.  
+- Firewalls: Controls incoming and outgoing network traffic.  
+- Data Loss Prevention (DLP): Protects sensitive data from unauthorized access or leakage.  
+- Device Control: Manages and secures external devices (USBs, external drives).  
+- Patch Management: Keeps software and operating systems up-to-date to prevent vulnerabilities.  
+
+=> Benefits of Endpoint Security:  
+- Protects devices from malware, ransomware, and phishing attacks.  
+- Centralized management and monitoring of all endpoints.  
+- Reduces risk of data breaches and cyber incidents.  
+- Enhances compliance with security policies and regulations.  
+
+=> Challenges:  
+- Managing a large number of endpoints can be complex.  
+- Users may disable security software, increasing risk.  
+- Rapidly evolving threats require continuous updates and monitoring.  
+
+=> Examples of Endpoint Security Solutions:  
+- Wazuh (with agent monitoring)  
+- CrowdStrike Falcon  
+- Symantec Endpoint Protection  
+- Microsoft Defender for Endpoint  
+- McAfee Endpoint Security  
+
+===========================
+Threat Intelligence
+==========================
+
+=> Threat Intelligence refers to the collection, analysis, and sharing of information about current or potential cyber threats.  
+=> It helps organizations proactively identify, prevent, and respond to cyber attacks.  
+=> Key Components of Threat Intelligence: 
+ 
+- **Data Collection:** Gathering information from logs, sensors, endpoints, networks, and open sources.  
+- **Analysis:** Examining data to identify patterns, tactics, techniques, and procedures (TTPs) used by attackers.  
+- **Threat Attribution:** Determining the source, motive, and behavior of cyber threats.  
+- **Dissemination:** Sharing actionable intelligence with SOC teams, security tools, and stakeholders.  
+
+=> Types of Threat Intelligence:  
+- **Strategic:** High-level trends and threat landscape for decision-making.  
+- **Tactical:** Insights on attacker techniques, procedures, and methods.  
+- **Operational:** Information about ongoing attacks and campaigns.  
+- **Technical:** Indicators of compromise (IoCs) like IP addresses, domains, file hashes.  
+
+=> Benefits of Threat Intelligence:  
+- Enables proactive defense and risk mitigation.  
+- Improves incident response and SOC decision-making.  
+- Helps prioritize vulnerabilities and security controls.  
+- Supports compliance and regulatory requirements.  
+
+=> Examples of Threat Intelligence Sources and Tools:  
+- Open-source feeds (OTX, VirusTotal, MISP)  
+- Commercial platforms (Recorded Future, Anomali, ThreatConnect)  
+- Wazuh integration with threat intelligence for alert correlation  
+
+
+=============
+Security Operations
+=============
+
+=> Security Operations (SecOps) refers to the processes, tools, and teams that protect an organization’s information systems from cyber threats.  
+=> It involves continuous monitoring, detection, analysis, and response to security incidents.  
+
+=> Key Functions of Security Operations:  
+- **Threat Detection:** Identifying suspicious activities, malware, and attacks in real-time.  
+- **Incident Response:** Investigating and responding to security events to minimize impact.  
+- **Vulnerability Management:** Scanning systems and applications for weaknesses and patching them.  
+- **Log Analysis & Monitoring:** Collecting and analyzing logs from endpoints, servers, and network devices.  
+- **Compliance & Reporting:** Ensuring adherence to regulatory standards (PCI-DSS, GDPR, HIPAA).  
+- **Threat Intelligence Integration:** Using threat feeds and indicators of compromise (IoCs) to enhance detection.  
+
+=> Tools Commonly Used in Security Operations:  
+- SIEM (Security Information and Event Management)  
+- IDS/IPS (Intrusion Detection/Prevention Systems)  
+- Endpoint Detection & Response (EDR)  
+- Firewalls, Antivirus, and Malware Protection  
+- Threat Intelligence Platforms  
+
+=> Benefits of Security Operations:  
+- Continuous 24/7 monitoring of IT infrastructure  
+- Early detection and rapid response to cyber threats  
+- Reduced risk of data breaches and downtime  
+- Improved compliance and audit readiness  
+
+=> Challenges in Security Operations:  
+- High volume of alerts can cause alert fatigue  
+- Shortage of skilled security professionals  
+- Rapidly evolving cyber threats require continuous adaptation  
+- Integration of multiple security tools and platforms can be complex  
+
+=============
+Cloud Security
+=============
+
+=> Cloud Security refers to the set of policies, technologies, and controls used to protect data, applications, and services hosted in cloud environments.  
+
+=> It ensures confidentiality, integrity, and availability (CIA) of cloud resources while preventing unauthorized access and cyber threats.  
+
+=> Key Components of Cloud Security:  
+- **Data Protection:** Encryption of data at rest and in transit to prevent unauthorized access.  
+- **Identity & Access Management (IAM):** Controls user access and permissions to cloud resources.  
+- **Threat Detection & Monitoring:** Continuous monitoring of cloud infrastructure for suspicious activities.  
+- **Configuration Management:** Ensures cloud resources follow security best practices and compliance standards.  
+- **Compliance & Governance:** Adherence to regulations like GDPR, HIPAA, PCI-DSS, ISO 27001.  
+- **Network Security:** Protects cloud networks using firewalls, VPNs, and secure APIs.  
+- **Incident Response:** Plans and procedures to detect, respond, and recover from security incidents.  
+
+=> Benefits of Cloud Security:  
+- Protects sensitive data and applications in the cloud  
+- Reduces the risk of data breaches and unauthorized access  
+- Ensures regulatory compliance  
+- Provides visibility and control over cloud environments  
+- Supports secure cloud adoption and business continuity  
+
+=> Examples of Cloud Security Tools and Services:  
+- Wazuh (Cloud monitoring and alerting)  
+- AWS Security Hub, Azure Security Center, Google Cloud Security Command Center  
+- Cloud Access Security Brokers (CASBs)  
+- Cloud-native firewalls and encryption tools  
+
+
+________________________________________
+
+
+
+=========================
+Installation of SOC
+=========================
+
+
+=> Installing a Security Operations Center (SOC) involves setting up the infrastructure, tools, and processes to monitor and respond to cybersecurity threats.  
+
+=> Key Steps for SOC Installation:  
+
+- **Planning & Requirements Gathering:**  
+  - Define objectives and scope of the SOC.  
+  - Identify systems, networks, and applications to monitor.  
+  - Determine budget, team size, and compliance requirements.  
+
+- **Infrastructure Setup:**  
+  - Set up servers, storage, and network connectivity.  
+  - Ensure high availability and redundancy.  
+  - Prepare secure workspace for SOC analysts.  
+
+- **Tool Deployment:**  
+  - Install and configure SIEM (e.g., Wazuh, Splunk, QRadar).  
+  - Deploy IDS/IPS, EDR, firewalls, and other security monitoring tools.  
+  - Set up log collection, storage, and retention policies.  
+
+- **Integration:**  
+  - Integrate endpoints, servers, network devices, cloud services, and applications.  
+  - Configure alerting and notification systems.  
+  - Connect threat intelligence feeds for real-time detection.  
+
+- **Team Setup & Training:**  
+  - Hire or assign SOC analysts and managers.  
+  - Provide training on tools, incident response, and security best practices.  
+  - Define SOC processes, escalation paths, and reporting structures.  
+
+- **Testing & Optimization:**  
+  - Conduct test attacks and simulate incidents to validate SOC effectiveness.  
+  - Tune correlation rules, alerts, and dashboards.  
+  - Implement continuous improvement and monitoring processes.  
+
+=> Benefits of Installing SOC:  
+- Centralized security monitoring and management  
+- Faster detection and response to incidents  
+- Compliance with regulations and standards  
+- Improved risk management and business continuity  
+
+=> Challenges:  
+- High initial setup cost and resource requirement  
+- Requires skilled personnel for 24/7 monitoring  
+- Continuous maintenance and updates needed to handle evolving threats  
+
+=========================
+Installation of Wazuh & Types of Deployment
+=========================
+
+=> Wazuh is an open-source SIEM platform used for threat detection, security monitoring, and compliance.  
+
+=> Installing Wazuh involves setting up the server (Manager), agents on endpoints, and optionally integrating with Elastic Stack or OpenSearch for data visualization.  
+
+=> **Steps for Installing Wazuh Server:**  
+- Choose a supported OS (Ubuntu LTS, Debian, CentOS/RHEL).  
+- Install Wazuh Manager.  
+- Install and configure Elasticsearch or OpenSearch for storing and indexing logs.  
+- Install Kibana or OpenSearch Dashboards for visualization.  
+- Configure firewall and network rules for secure communication.  
+
+=> **Steps for Installing Wazuh Agents:**  
+- Install Wazuh agent on endpoints (Linux, Windows, macOS).  
+- Configure the agent to communicate with the Wazuh server.  
+- Verify the agent connection and ensure logs are being collected.  
+- Configure monitoring policies (FIM, malware detection, log collection).  
+
+=> Types of Wazuh Deployment:
+================================ 
+
+- **Single-Node Deployment:**  
+  - Wazuh Server, Elasticsearch, and Dashboard all installed on a single machine.  
+  - Suitable for small environments or testing purposes.  
+
+- **Distributed Deployment:**  
+  - Wazuh Server, Elasticsearch, and Dashboard are installed on separate machines.  
+  - Scalable and suitable for medium to large organizations.  
+  - Improves performance and fault tolerance.  
+
+- **Clustered Deployment:**  
+  - Multiple Wazuh servers and Elasticsearch nodes for high availability and load balancing.  
+  - Designed for large enterprises with heavy log volumes.  
+  - Provides redundancy and ensures continuous monitoring even if one node fails.  
+
+=> **Benefits of Wazuh Deployment:**  
+- Centralized security monitoring and threat detection.  
+- Flexible deployment options based on organization size.  
+- Supports compliance reporting (PCI-DSS, HIPAA, GDPR).  
+- Scalable to handle increasing endpoints and log volume.  
+
+==========================================================
+🔹 Module 2: Agent Deployment & Data Collection (11–20)
+==========================================================
+10      what is Agent and types 
+11.	Installing Wazuh Agent on Windows 10/11
+12.	Installing Wazuh Agent on Linux (Ubuntu/CentOS)
+13.	Deploying Wazuh Agent on macOS
+14.	Cloud Integration: Wazuh on AWS Logs
+15.	Cloud Integration: Wazuh on Azure Logs
+16.	Cloud Integration: Wazuh on GCP Logs
+17.	Monitoring Syslog Devices with Wazuh (Routers, Firewalls)
+18.	Collecting Web Server Logs (Apache, Nginx, IIS)
+19.	Collecting Database Logs (MySQL, PostgreSQL, MSSQL)
+20.	Collecting Endpoint Logs (EDR-style Monitoring)
+
+
+
+What is an Agent?
+
+=> An agent is a small software installed on endpoints (PCs, servers, or devices) to monitor and collect data.
+=> It communicates with a central management system (like Wazuh Manager) to send logs, alerts, and security events.
+=> Agents help in real-time monitoring, threat detection, and incident response.
+=> In Wazuh:
+
+01: Active Agent → Sends data automatically to the manager.
+02: Passive Agent → Manager collects data on demand.
+03: Agentless → No software installed; data collected via SSH, WMI, or APIs.
+
+
+
+
+
+Types of Wazuh Agent
+============================
+=> Wazuh Agent is software installed on endpoints to monitor security events, logs, and system integrity.
+=> Types of Wazuh Agent:
+
+Active Agent
+=> Installed on endpoint, actively monitors logs, files, and processes.
+=> Sends alerts and data directly to Wazuh Manager.
+
+Passive Agent
+=> Does not send data automatically.
+=> Wazuh Manager polls agent to collect information.
+=> Useful for devices with intermittent connectivity.
+
+Agentless Monitoring
+=> No agent installed on the endpoint.
+=> Manager collects data via SSH, WMI, or APIs.
+=> Ideal for network devices, cloud instances, or endpoints that cannot install agents.
+
+=> Notes:
+
+Active agents are preferred for real-time monitoring.
+Agentless is suitable for routers, firewalls, and network devices.
+Wazuh Agents support Windows, Linux, and macOS.
+
+
+
+
+Installing Wazuh Agent on Windows 10/11
+========================================
+
+=> Wazuh Agent monitors security events, logs, and system changes on endpoints.
+=> Communicates with Wazuh Manager to send alerts and reports.
+=> Installation Steps:
+
+Download latest Windows .msi from Wazuh Downloads
+
+Run .msi as Administrator.
+Enter Wazuh Manager IP and Agent Name.
+Complete installation and start service.
+Verify service: 
+        sc query WazuhSvc
+
+
+Restart agent service:
+--------------------------
+	net stop WazuhSvc
+	net start WazuhSvc
+
+Confirm agent is active on Wazuh Manager:
+------------------------------------
+	/var/ossec/bin/agent_control -l
+
+=> Notes:
+=================
+Open firewall ports TCP 1514 & 1515.
+Allow antivirus exceptions.
+Supports log monitoring, file integrity, and real-time threat detection.
+
+
+Installing Wazuh Agent on Linux (Ubuntu/CentOS)
+===================================================
+
+=> Wazuh Agent monitors system logs, security events, and file integrity on Linux endpoints.
+=> It sends alerts and logs to the Wazuh Manager for centralized monitoring.
+=> Installation Steps (Ubuntu/Debian):
+sudo systemctl enable wazuh-agent
+sudo systemctl start wazuh-agent
+sudo systemctl status wazuh-agent
+
+
+=> Notes:
+
+Open firewall port TCP 1514 & 1515.
+Register agent with Wazuh Manager if using manual key.
+Supports log monitoring, file integrity, and security alerts.
+
+Wazuh Agent Firewall Configuration
+===================================
+
+What is a Firewall?
+
+=> A firewall is a network security device or software that monitors and controls incoming and outgoing network traffic.
+=> It acts as a barrier between a trusted internal network and untrusted external networks (like the Internet).
+=> The main purpose of a firewall is to allow safe traffic and block malicious or unauthorized access.
+=> Firewalls can be hardware-based, software-based, or a combination.
+=> Types of Firewalls:
+=============================
+
+Packet Filtering Firewall → Filters traffic based on IP address, port, or protocol.
+Stateful Inspection Firewall → Tracks active connections and filters packets accordingly.
+Proxy Firewall → Acts as an intermediary between users and external networks.
+Next-Generation Firewall (NGFW) → Includes advanced features like intrusion prevention, deep packet inspection, and application control.
+
+=> Key Functions:
+====================
+
+Block unauthorized access.
+Protect against malware and cyber attacks.
+Control traffic based on rules and policies.
+Monitor and log network activity for analysis.
+
+
+Windows 10/11 Firewall
+========================
+
+==>Open Windows Defender Firewall → Advanced Settings.
+==>Click Inbound Rules → New Rule.
+==>Select Port → Next → TCP, enter 1514,1515.
+==>Allow the connection → Next → Apply to Domain, Private, Public.
+==>Name the rule (e.g., Wazuh Agent) → Finish.
+==>Repeat for Outbound Rules if needed.
+
+Linux (Ubuntu/Debian)
+=========================
+sudo ufw allow 1514/tcp
+sudo ufw allow 1515/tcp
+sudo ufw reload
+sudo ufw status
+
+
+Linux (CentOS/RHEL with firewalld)
+=================================
+sudo firewall-cmd --permanent --add-port=1514/tcp
+sudo firewall-cmd --permanent --add-port=1515/tcp
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-all
+
+====================================================================
+17.	Monitoring Syslog Devices with Wazuh (Routers, Firewalls)
+==========================================================================
+
+
+=> Wazuh can monitor logs from network devices like routers, firewalls, and switches.
+=> These devices usually send logs via Syslog protocol (UDP/TCP port 514).
+=> Steps to Monitor Syslog Devices:
+
+01 : Enable Syslog on Devices
+=> Configure routers/firewalls to send logs to Wazuh Manager IP.
+=> Set appropriate facility and severity levels.
+
+Configure Wazuh Manager
+=> Enable Syslog input in /var/ossec/etc/ossec.conf.
+=> Example:
+
+
+-------------------------------------------------
+<remote>
+  <connection>syslog</connection>
+  <port>514</port>
+</remote>
+-------------------------------------------------
+
+Open Firewall Ports
+=> Allow UDP/TCP port 514 on Wazuh Manager.
+
+Create Device-Specific Rules
+=> Use Wazuh decoders to parse logs.
+=> Apply rules for security events and alerts.
+
+Monitor and Analyze
+=> View alerts and dashboards in Wazuh Kibana/Elastic Stack.
+=> Track failed logins, configuration changes, and network attacks.
+
+=> Notes:
+
+Ensure logs have accurate timestamps.
+
+Use TLS or VPN if logs are sent over untrusted networks.
+
+Supports real-time alerts and historical analysis.
+
+
+
+ == you can make documentation
+======================================
+
+ 
+________________________________________
+🔹 Module 3: Rules, Alerts & Detection (21–30)
+21.	Wazuh Rules & Decoders Explained
+22.	Writing Custom Rules in Wazuh
+23.	Alert Levels in Wazuh – Severity Explained
+24.	Detecting Brute Force Attacks with Wazuh
+25.	Detecting Malware Behavior with Wazuh Logs
+26.	Detecting Privilege Escalation in Linux/Windows
+27.	Detecting Insider Threats with Wazuh
+28.	Detecting Phishing Attempts in Logs
+29.	Detecting Lateral Movement & RDP Attacks
+30.	Detecting SQL Injection in Web Logs
+________________________________________
+🔹 Module 4: Security Monitoring & Threat Hunting (31–40)
+31.	Threat Hunting in Wazuh – Step by Step
+32.	MITRE ATT&CK Framework with Wazuh
+33.	File Integrity Monitoring (FIM) in Wazuh
+34.	Vulnerability Detection with Wazuh
+35.	Rootkit Detection in Linux with Wazuh
+36.	Windows Registry Monitoring with Wazuh
+37.	Active Response in Wazuh – Auto Blocking IPs
+38.	Integrating Wazuh with Firewall Rules (iptables, Windows Firewall)
+39.	Detecting Ransomware Attacks with Wazuh
+40.	Real Incident Response Demo in Wazuh
+
+===============================
+what is Threat Hunting ? 
+================================
+
+What is Threat Hunting?
+
+=> Threat Hunting is the proactive process of searching for hidden threats or malicious activities in an organization’s network and systems.
+=> It goes beyond automated alerts, assuming attackers may already be present but undetected.
+=> The main goal of Threat Hunting is to identify, analyze, and mitigate threats before they cause damage.
+=> Threat Hunting uses data from logs, endpoints, network traffic, and threat intelligence to uncover suspicious behavior.
+
+=> Key Components of Threat Hunting:
+
+	Hypothesis-Based Hunting: Formulate assumptions about possible attacks.
+	Data Collection & Analysis: Gather logs and network data for investigation.
+	Detection Tools: SIEM, EDR/XDR, network analyzers, threat intel platforms.
+	Investigation & Response: Confirm threats and remediate.
+	Feedback & Improvement: Update rules, document findings, and strengthen defenses.
+
+=> Types / Methodologies of Threat Hunting:
+
+	Indicator of Compromise (IoC) Hunting – Searching for known malicious signatures.
+	Behavioral Analysis Hunting – Detecting unusual or abnormal patterns.
+	Analytics-Driven Hunting – Using machine learning and statistical models to find hidden threats.
+
+=> Benefits of Threat Hunting:
+
+	Early detection of advanced attacks.
+	Reduces dwell time of attackers.
+	Improves overall security posture.
+	Enhances threat intelligence and response capabilities.
+
+
+________________________________________
+🔹 Module 5: Integrations & Advanced SOC Tools (41–50)
+41.	Wazuh + Suricata IDS Integration
+42.	Wazuh + Zeek (Bro) Integration
+43.	Wazuh + ELK Stack (Elasticsearch, Logstash, Kibana)
+44.	Wazuh + Grafana Dashboards
+45.	Wazuh + MISP for Threat Intelligence
+46.	Wazuh + TheHive for Incident Response
+47.	Wazuh + Cortex for Automated Analysis
+48.	Wazuh + OpenCTI for Cyber Threat Intel
+49.	Wazuh + VirusTotal API for File/Hash Lookup
+50.	Wazuh + AbuseIPDB for Malicious IPs
+________________________________________
+🔹 Module 6: Scaling, Automation & Career (51–60+)
+51.	Scaling Wazuh for Enterprise SOCs (Multi-Node Setup)
+52.	High Availability (HA) Setup for Wazuh
+53.	Wazuh with Docker – Step by Step Deployment
+54.	Wazuh with Kubernetes – Enterprise Setup
+55.	Automating SOC Playbooks with Wazuh
+56.	Wazuh + Ansible for Automation
+57.	Wazuh + AI/ML for Threat Detection
+58.	SOC Metrics & Reporting in Wazuh
+59.	SOC Compliance Monitoring with Wazuh (PCI-DSS, ISO, HIPAA)
+60.	SOC Career Path – Becoming a Pro SOC Analyst with Wazuh
+
