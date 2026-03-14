@@ -2,6 +2,22 @@
 
 This repository teaches SOC operations through a Wazuh-centered learning path. It starts with core SOC concepts, then moves into deployment, detection engineering, monitoring, integrations, and enterprise scaling.
 
+![Wazuh Header](./Assets/images/wazuh-header-image.jpg)
+
+
+## Project Status
+
+This repository is actively being improved. Some modules are more complete than others, so use the tracking tables below to see what is ready now and what is still planned.
+
+| Area | Status | Notes |
+|---|---|---|
+| Core learning path | In progress | All 6 modules have top-level structure and theory direction |
+| Beginner onboarding | In progress | Module 1 is the strongest starting point |
+| Hands-on labs | Partial | Labs currently exist in Module 1 and Module 5 |
+| Supporting resources | Partial | Resources currently exist in Module 1 and Module 5 |
+| Navigation and links | Improved | Main README and internal links were cleaned up |
+| Architecture visuals | In progress | Mermaid diagrams were added to key documentation pages |
+
 ## What You Will Learn
 
 By working through the modules in order, you will learn how to:
@@ -67,6 +83,30 @@ SOC-Analyst-with-Wazuh-Beginner-to-Advanced/
    └── theory/
 ```
 
+## Module Tracking
+
+Use this table to track both repository completeness and your own study progress.
+
+| Module | Focus | Current Content | Repo Status | Your Progress |
+|---|---|---|---|---|
+| Module 1 | SOC fundamentals and Wazuh basics | README, theory, labs, resources | Strong starting module | [ ] |
+| Module 2 | Agent deployment | README, theory | Theory-focused | [ ] |
+| Module 3 | Rules and alerts | README, theory | Early-stage module | [ ] |
+| Module 4 | Monitoring and hunting | README, theory | Early-stage module | [ ] |
+| Module 5 | Integrations | README, theory, labs, resources | Most complete advanced module | [ ] |
+| Module 6 | Scaling and automation | README, theory | Roadmap-stage module | [ ] |
+
+## Content Coverage Tracker
+
+| Module | README | Theory | Labs | Resources |
+|---|---|---|---|---|
+| Module 1 | Yes | Yes | Yes | Yes |
+| Module 2 | Yes | Yes | No | No |
+| Module 3 | Yes | Yes | No | No |
+| Module 4 | Yes | Yes | No | No |
+| Module 5 | Yes | Yes | Yes | Yes |
+| Module 6 | Yes | Yes | No | No |
+
 ## Modules
 
 ### [Module 1: SOC Fundamentals](./Module-1-SOC-Fundamentals/README.md)
@@ -86,6 +126,24 @@ Integrations with Suricata, ELK, MISP, TheHive, and broader SOC data flows.
 
 ### [Module 6: Scaling and Automation](./Module-6-Scaling-Automation/README.md)
 Enterprise architecture, clustering, automation, and operational scaling.
+
+## Roadmap
+
+### High Priority
+- Expand beginner-first labs for Module 2
+- Add more rule-writing content to Module 3
+- Add monitoring labs and resources to Module 4
+- Modernize installation guidance where version-specific steps are outdated
+
+### Medium Priority
+- Add screenshots and annotated diagrams for core workflows
+- Add quiz or checkpoint sections to each module
+- Add more SOC case-study examples based on real alert flows
+
+### Long Term
+- Add enterprise labs for Module 6
+- Add contribution guidelines and content standards
+- Add issue templates for documentation and lab improvements
 
 ## Recommended Study Method
 
@@ -107,3 +165,20 @@ For the smoothest learning experience, use:
 ## Best Starting Point
 
 Start with [Module-1-SOC-Fundamentals/README.md](./Module-1-SOC-Fundamentals/README.md). If you are new to SIEM or SOC work, do not skip the architecture and lab sections.
+
+## Suggested Way To Track Your Learning
+
+1. Mark one module as complete only after you finish both reading and practice.
+2. Keep a separate notes file for commands, ports, log paths, and troubleshooting steps.
+3. Record one real example per module, such as a failed login, file change, or Suricata alert.
+4. Revisit Module 1 architecture after finishing Module 3 and Module 5.
+5. If a module is theory-only, treat it as concept preparation and pair it with your own lab notes.
+
+## Contribution Tracking
+
+If you want to contribute to this repository, the safest improvement areas are:
+- Fixing broken links or inaccurate file references
+- Improving readability for beginners
+- Adding diagrams, screenshots, and walkthroughs
+- Expanding missing labs in Modules 2, 3, 4, and 6
+- Updating outdated installation steps with clear version notes
