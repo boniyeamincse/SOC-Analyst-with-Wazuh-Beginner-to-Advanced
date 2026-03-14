@@ -182,3 +182,7 @@ If you want to contribute to this repository, the safest improvement areas are:
 - Adding diagrams, screenshots, and walkthroughs
 - Expanding missing labs in Modules 2, 3, 4, and 6
 - Updating outdated installation steps with clear version notes
+
+For open-source contributors:
+- Read [CONTRIBUTING.md](./CONTRIBUTING.md) for the fork, branch, and pull request workflow
+- Read [docs/DOCUMENTATION-GUIDE.md](./docs/DOCUMENTATION-GUIDE.md) for writing standards and documentation structure
