@@ -247,4 +247,4 @@ curl -X GET "localhost:9200/_cluster/health"
 
 Ready for advanced troubleshooting techniques.
 
-**[← Back: Wazuh Single-Node Setup →](./lab-02-wazuh-single-node.md)** | **[Next: Troubleshooting →](./lab-04-troubleshooting.md)**
+**[← Back: Wazuh Single-Node Setup →](./lab-01-wazuh-single-node.md)** | **[Next: Troubleshooting →](./lab-04-troubleshooting.md)**

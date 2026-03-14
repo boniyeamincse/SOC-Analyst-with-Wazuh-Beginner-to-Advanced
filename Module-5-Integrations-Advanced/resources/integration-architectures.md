@@ -4,6 +4,26 @@
 
 This document provides comprehensive integration architecture patterns for connecting Wazuh with various security tools and platforms, including best practices, design considerations, and implementation guidelines.
 
+## Visual Architecture Summary
+
+```mermaid
+flowchart LR
+  N[Network traffic] --> S[Suricata]
+  E[Endpoints] --> A[Wazuh agents]
+  A --> M[Wazuh manager]
+  S --> M
+  M --> ELK[Indexer or ELK stack]
+  ELK --> K[Dashboards]
+  M --> TI[MISP or Threat Intel]
+  M --> IR[TheHive]
+  IR --> CX[Cortex]
+  K --> SA[SOC analyst]
+  TI --> SA
+  IR --> SA
+```
+
+Use this as the high-level map before reading the detailed integration patterns below.
+
 ## Core Integration Patterns
 
 ### 1. Direct API Integration

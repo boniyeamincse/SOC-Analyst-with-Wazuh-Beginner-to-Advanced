@@ -559,4 +559,4 @@ mv "$CURRENT_PACKAGES" "$PREVIOUS_PACKAGES"
 
 Now that you understand Linux deployment, let's explore macOS agent deployment procedures.
 
-**[← Previous: Windows Deployment](./02-windows-deployment.md)** | **[Next: macOS Deployment →](./04-macos-deployment.md)**
+**[← Previous: Windows Deployment](./02-windows-deployment.md)** | **[Next: Module Overview →](../README.md)**

@@ -29,23 +29,11 @@ By the end of this module, you will be able to:
 ```
 📁 Module-4-Security-Monitoring/
 ├── 📄 README.md (This file)
-├── 📁 theory/
-│   ├── 📄 01-threat-hunting-fundamentals.md
-│   ├── 📄 02-mitre-attck-framework.md
-│   ├── 📄 03-file-integrity-monitoring.md
-│   ├── 📄 04-vulnerability-detection.md
-│   ├── 📄 05-rootkit-detection.md
-│   └── 📄 06-windows-registry-monitoring.md
-├── 📁 labs/
-│   ├── 📄 lab-01-threat-hunting-workshop.md
-│   ├── 📄 lab-02-fim-implementation.md
-│   ├── 📄 lab-03-vulnerability-scanning.md
-│   ├── 📄 lab-04-active-response-setup.md
-│   └── 📄 lab-05-ransomware-detection.md
-└── 📁 resources/
-    ├── 📄 threat-hunting-methodologies.md
-    ├── 📄 mitre-attck-mapping.md
-    └── 📄 monitoring-checklists.md
+└── 📁 theory/
+    ├── 📄 01-threat-hunting-fundamentals.md
+    ├── 📄 02-mitre-attck-framework.md
+    ├── 📄 03-file-integrity-monitoring.md
+    └── 📄 04-vulnerability-detection.md
 ```
 
 ### 🛠️ Prerequisites
@@ -150,7 +138,7 @@ You can move to the next module when you:
 
 ### 📞 Support Resources
 
-- **Module Resources**: Check the `/resources/` folder for reference materials
+- **Current Scope**: This module currently includes four theory files; the additional labs and resource items in the learning plan are future expansion targets
 - **MITRE ATT&CK**: [attack.mitre.org](https://attack.mitre.org/)
 - **Wazuh Documentation**: FIM and monitoring guides
 - **Threat Hunting Community**: Share experiences and learn from others

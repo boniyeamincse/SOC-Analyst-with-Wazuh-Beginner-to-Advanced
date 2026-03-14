@@ -496,4 +496,4 @@ sudo /var/ossec/bin/ossec-logtest
 
 Now that you understand the fundamentals of rules and decoders, let's explore how to create custom rules for specific security scenarios.
 
-**[← Back to Module Overview](../README.md)** | **[Next: Custom Rules Creation →](./02-custom-rules-creation.md)**
+**[← Back to Module Overview](../README.md)** | **[Next: Review Detection Roadmap →](../README.md)**

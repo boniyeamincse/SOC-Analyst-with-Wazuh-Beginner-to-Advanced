@@ -183,4 +183,4 @@ After completing this lab, you should have:
 
 Now that you have a basic SOC setup, let's configure Wazuh single-node deployment.
 
-**[← Back: Wazuh vs Competitors →](../theory/06-wazuh-vs-competitors.md)** | **[Next: Wazuh Single-Node Setup →](./lab-02-wazuh-single-node.md)**
+**[← Back: Wazuh vs Competitors →](../theory/06-wazuh-vs-competitors.md)** | **[Next: Wazuh Single-Node Setup →](./lab-01-wazuh-single-node.md)**

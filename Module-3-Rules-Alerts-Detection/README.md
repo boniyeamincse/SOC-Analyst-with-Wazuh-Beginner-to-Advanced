@@ -28,23 +28,8 @@ By the end of this module, you will be able to:
 ```
 📁 Module-3-Rules-Alerts-Detection/
 ├── 📄 README.md (This file)
-├── 📁 theory/
-│   ├── 📄 01-rules-decoders-basics.md
-│   ├── 📄 02-custom-rules-creation.md
-│   ├── 📄 03-alert-levels-severity.md
-│   ├── 📄 04-brute-force-detection.md
-│   ├── 📄 05-malware-behavior-detection.md
-│   └── 📄 06-advanced-threat-detection.md
-├── 📁 labs/
-│   ├── 📄 lab-01-basic-rule-customization.md
-│   ├── 📄 lab-02-alert-level-configuration.md
-│   ├── 📄 lab-03-brute-force-attack-detection.md
-│   ├── 📄 lab-04-malware-behavior-analysis.md
-│   └── 📄 lab-05-threat-hunting-rules.md
-└── 📁 resources/
-    ├── 📄 rule-syntax-reference.md
-    ├── 📄 common-detection-patterns.md
-    └── 📄 rule-testing-tools.md
+└── 📁 theory/
+    └── 📄 01-rules-decoders-basics.md
 ```
 
 ### 🛠️ Prerequisites
@@ -148,7 +133,7 @@ You can move to the next module when you:
 
 ### 📞 Support Resources
 
-- **Module Resources**: Check the `/resources/` folder for reference materials
+- **Current Scope**: This module currently contains the foundational theory file for rules and decoders; treat the other items in this overview as planned expansion topics
 - **Wazuh Documentation**: [Rules Reference](https://documentation.wazuh.com/current/user-manual/ruleset/rules.html)
 - **Community Forums**: Wazuh community discussions on rule development
 - **GitHub Issues**: Report bugs and get help with rule configurations

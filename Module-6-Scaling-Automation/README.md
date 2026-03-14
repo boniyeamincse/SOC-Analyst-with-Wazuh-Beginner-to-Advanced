@@ -29,23 +29,8 @@ By the end of this module, you will be able to:
 ```
 📁 Module-6-Scaling-Automation/
 ├── 📄 README.md (This file)
-├── 📁 theory/
-│   ├── 📄 01-enterprise-scaling.md
-│   ├── 📄 02-high-availability.md
-│   ├── 📄 03-containerization.md
-│   ├── 📄 04-automation-frameworks.md
-│   ├── 📄 05-ai-ml-integration.md
-│   └── 📄 06-soc-career-path.md
-├── 📁 labs/
-│   ├── 📄 lab-01-multi-node-cluster.md
-│   ├── 📄 lab-02-docker-deployment.md
-│   ├── 📄 lab-03-kubernetes-setup.md
-│   ├── 📄 lab-04-ansible-automation.md
-│   └── 📄 lab-05-soc-metrics-dashboard.md
-└── 📁 resources/
-    ├── 📄 career-roadmap.md
-    ├── 📄 certification-guide.md
-    └── 📄 enterprise-architectures.md
+└── 📁 theory/
+    └── 📄 01-enterprise-scaling.md
 ```
 
 ### 🛠️ Prerequisites
@@ -158,7 +143,7 @@ You can complete this tutorial when you:
 
 ### 📞 Support Resources
 
-- **Module Resources**: Check the `/resources/` folder for career and architecture guides
+- **Current Scope**: This module currently contains the enterprise scaling theory chapter; treat the rest of the roadmap as planned future content
 - **Enterprise Documentation**: Advanced Wazuh deployment guides
 - **Community Forums**: Enterprise SOC discussions and best practices
 - **Professional Networks**: LinkedIn groups and cybersecurity communities
