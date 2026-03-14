@@ -26,23 +26,10 @@ By the end of this module, you will be able to:
 ```
 📁 Module-2-Agent-Deployment/
 ├── 📄 README.md (This file)
-├── 📁 theory/
-│   ├── 📄 01-agent-types.md
-│   ├── 📄 02-windows-deployment.md
-│   ├── 📄 03-linux-deployment.md
-│   ├── 📄 04-macos-deployment.md
-│   ├── 📄 05-cloud-integration.md
-│   └── 📄 06-advanced-collection.md
-├── 📁 labs/
-│   ├── 📄 lab-01-multi-agent-deployment.md
-│   ├── 📄 lab-02-cloud-monitoring.md
-│   ├── 📄 lab-03-network-device-monitoring.md
-│   ├── 📄 lab-04-web-server-monitoring.md
-│   └── 📄 lab-05-database-monitoring.md
-└── 📁 resources/
-    ├── 📄 deployment-checklist.md
-    ├── 📄 troubleshooting-guide.md
-    └── 📄 agent-configuration-examples.md
+└── 📁 theory/
+    ├── 📄 01-agent-types.md
+    ├── 📄 02-windows-deployment.md
+    └── 📄 03-linux-deployment.md
 ```
 
 ### 🛠️ Prerequisites
@@ -131,7 +118,7 @@ You can move to the next module when you:
 
 ### 📞 Support Resources
 
-- **Module Resources**: Check the `/resources/` folder
+- **Module Content**: Use the theory files in this module and the labs from Module 1 for practice until dedicated Module 2 labs are added
 - **Official Documentation**: [Wazuh Agent Deployment Guide](https://documentation.wazuh.com/)
 - **Community Forums**: Wazuh community discussions
 - **GitHub Issues**: Report bugs and get help

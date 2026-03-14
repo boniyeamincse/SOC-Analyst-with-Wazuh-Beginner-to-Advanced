@@ -1,5 +1,22 @@
 # Wazuh Architecture Explained
 
+## Quick Mental Model
+
+Before going deep into the components, keep this event path in mind:
+
+```mermaid
+flowchart LR
+   EV[Security event on endpoint] --> AG[Wazuh agent]
+   AG --> MG[Wazuh manager]
+   MG --> RL[Rules and correlation]
+   RL --> AL[Alert]
+   AL --> IX[Indexer]
+   IX --> DS[Dashboard]
+   DS --> AN[Analyst investigation]
+```
+
+This is the simplest way to understand Wazuh. Everything else in this chapter explains one part of that chain.
+
 ## 🎯 Learning Objectives
 
 By the end of this section, you will understand:
@@ -11,6 +28,42 @@ By the end of this section, you will understand:
 ## 🏗️ Wazuh Architecture Overview
 
 ### High-Level Architecture
+
+```mermaid
+flowchart LR
+   subgraph Sources
+      EP[Endpoints]
+      ND[Network devices]
+      AP[Applications]
+   end
+
+   subgraph Collection
+      AG[Wazuh agents]
+   end
+
+   subgraph Analysis
+      MG[Wazuh manager]
+      API[Wazuh API]
+   end
+
+   subgraph Storage
+      IDX[Indexer]
+   end
+
+   subgraph Visibility
+      DASH[Dashboard]
+      ANALYST[Analyst]
+   end
+
+   EP --> AG
+   ND --> MG
+   AP --> AG
+   AG --> MG
+   MG --> API
+   MG --> IDX
+   IDX --> DASH
+   DASH --> ANALYST
+```
 
 ```
 ┌─────────────────────────────────────────────────────────────┐

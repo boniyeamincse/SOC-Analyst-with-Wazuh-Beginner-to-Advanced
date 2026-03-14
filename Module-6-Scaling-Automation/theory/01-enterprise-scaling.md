@@ -1,5 +1,33 @@
 # Enterprise SOC Scaling with Wazuh
 
+## Visual Architecture Summary
+
+```mermaid
+flowchart TB
+  LB[Load balancer]
+  AG[Wazuh agents]
+  WM1[Manager node 1]
+  WM2[Manager node 2]
+  WM3[Manager node 3]
+  IDX1[Indexer node 1]
+  IDX2[Indexer node 2]
+  DASH[Dashboard]
+  SOC[SOC team]
+
+  AG --> LB
+  LB --> WM1
+  LB --> WM2
+  LB --> WM3
+  WM1 --> IDX1
+  WM2 --> IDX1
+  WM3 --> IDX2
+  IDX1 --> DASH
+  IDX2 --> DASH
+  DASH --> SOC
+```
+
+This is the enterprise version of the same flow you learned in Module 1: more nodes, more resilience, same core idea.
+
 ## 🎯 Learning Objectives
 
 By the end of this section, you will understand:
@@ -705,4 +733,4 @@ curl -X GET "https://localhost:55000/security/hipaa" \
 
 Now that you understand enterprise scaling, let's explore high availability configurations to ensure your SOC remains operational during failures.
 
-**[← Back to Module Overview](../README.md)** | **[Next: High Availability →](./02-high-availability.md)**
+**[← Back to Module Overview](../README.md)** | **[Next: Review Module Roadmap →](../README.md)**

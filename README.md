@@ -1,157 +1,109 @@
-# SOC Analyst with Wazuh - Complete Tutorial
+# SOC Analyst with Wazuh
 
-> A comprehensive, hands-on tutorial designed for aspiring SOC analysts to master cybersecurity operations using Wazuh SIEM.
+This repository teaches SOC operations through a Wazuh-centered learning path. It starts with core SOC concepts, then moves into deployment, detection engineering, monitoring, integrations, and enterprise scaling.
 
-## 🎯 Tutorial Overview
+## What You Will Learn
 
-This tutorial is structured to take you from cybersecurity fundamentals to advanced SOC operations using Wazuh. Each module builds upon the previous one, providing both theoretical knowledge and practical implementation steps.
+By working through the modules in order, you will learn how to:
+- Understand how a SOC operates day to day
+- Deploy Wazuh managers and agents in a lab environment
+- Read alerts, write rules, and improve detection quality
+- Investigate threats with hunting and monitoring workflows
+- Integrate Wazuh with tools such as Suricata, ELK, MISP, and TheHive
+- Plan for larger, enterprise-style deployments
 
-### 📚 Learning Objectives
+## Learning Flow
 
-By the end of this tutorial, you will be able to:
-- Understand SOC fundamentals and cybersecurity operations
-- Deploy and configure Wazuh SIEM in various environments
-- Monitor endpoints, networks, and cloud infrastructure
-- Create custom detection rules and alerts
-- Perform threat hunting and incident response
-- Integrate Wazuh with other security tools
-- Scale Wazuh for enterprise environments
-
-### 🏗️ Tutorial Structure
-
-Each module is organized as a folder containing:
-- **README.md**: Module overview and learning objectives
-- **theory/**: Conceptual explanations and best practices
-- **labs/**: Hands-on exercises and practical implementations
-- **resources/**: Additional reading materials and references
-
-```
-📁 SOC-Wazuh-Tutorial/
-├── 📄 README.md (Main tutorial overview)
-├── 📁 Module-1-SOC-Fundamentals/
-│   ├── 📄 README.md
-│   ├── 📁 theory/
-│   ├── 📁 labs/
-│   └── 📁 resources/
-├── 📁 Module-2-Agent-Deployment/
-│   ├── 📄 README.md
-│   ├── 📁 theory/
-│   ├── 📁 labs/
-│   └── 📁 resources/
-└── ... (additional modules)
+```mermaid
+flowchart LR
+   M1[Module 1<br/>SOC Fundamentals] --> M2[Module 2<br/>Agent Deployment]
+   M2 --> M3[Module 3<br/>Rules and Alerts]
+   M3 --> M4[Module 4<br/>Monitoring and Hunting]
+   M4 --> M5[Module 5<br/>Integrations]
+   M5 --> M6[Module 6<br/>Scaling and Automation]
 ```
 
-## 📖 Modules Overview
+## How Wazuh Fits In A SOC
 
-### [Module 1: SOC & Wazuh Fundamentals](./Module-1-SOC-Fundamentals/)
-Learn the basics of Security Operations Centers, SIEM concepts, and Wazuh architecture.
+```mermaid
+flowchart LR
+   E[Endpoints and Servers] --> A[Wazuh Agents]
+   A --> M[Wazuh Manager]
+   M --> I[Indexer]
+   I --> D[Dashboard]
+   D --> S[SOC Analyst]
+   M --> R[Rules and Alerts]
+   R --> S
+```
 
-**Topics:** SOC Basics, SIEM Role, Wazuh Introduction, Architecture, OS Selection, Installation
+## Repository Structure
 
-### [Module 2: Agent Deployment & Data Collection](./Module-2-Agent-Deployment/)
-Master Wazuh agent deployment across different platforms and data collection methods.
+The repository is not identical in every module yet. Some modules currently include only theory, while others also include labs and resources.
 
-**Topics:** Agent Types, Windows/Linux/macOS Installation, Cloud Integration, Syslog Monitoring, Web/Database Logs
+```
+SOC-Analyst-with-Wazuh-Beginner-to-Advanced/
+├── README.md
+├── Module-1-SOC-Fundamentals/
+│   ├── README.md
+│   ├── theory/
+│   ├── labs/
+│   └── resources/
+├── Module-2-Agent-Deployment/
+│   ├── README.md
+│   └── theory/
+├── Module-3-Rules-Alerts-Detection/
+│   ├── README.md
+│   └── theory/
+├── Module-4-Security-Monitoring/
+│   ├── README.md
+│   └── theory/
+├── Module-5-Integrations-Advanced/
+│   ├── README.md
+│   ├── theory/
+│   ├── labs/
+│   └── resources/
+└── Module-6-Scaling-Automation/
+   ├── README.md
+   └── theory/
+```
 
-### [Module 3: Rules, Alerts & Detection](./Module-3-Rules-Alerts/)
-Understand Wazuh's detection engine and create custom security rules.
+## Modules
 
-**Topics:** Rules & Decoders, Custom Rules, Alert Levels, Threat Detection Patterns
+### [Module 1: SOC Fundamentals](./Module-1-SOC-Fundamentals/README.md)
+Foundation concepts: SOC roles, SIEM basics, Wazuh architecture, OS choices, and first labs.
 
-### [Module 4: Security Monitoring & Threat Hunting](./Module-4-Monitoring-Hunting/)
-Implement advanced monitoring and proactive threat hunting techniques.
+### [Module 2: Agent Deployment](./Module-2-Agent-Deployment/README.md)
+Agent types and deployment guidance for Windows and Linux environments.
 
-**Topics:** Threat Hunting, MITRE ATT&CK, FIM, Vulnerability Detection, Active Response
+### [Module 3: Rules, Alerts, and Detection](./Module-3-Rules-Alerts-Detection/README.md)
+Detection logic, decoders, rule writing, and alert interpretation.
 
-### [Module 5: Integrations & Advanced Tools](./Module-5-Integrations/)
-Integrate Wazuh with other security tools and platforms.
+### [Module 4: Security Monitoring and Threat Hunting](./Module-4-Security-Monitoring/README.md)
+Threat hunting, MITRE ATT&CK mapping, file integrity monitoring, and vulnerability detection.
 
-**Topics:** Suricata, ELK Stack, MISP, TheHive, VirusTotal Integration
+### [Module 5: Integrations and Advanced SOC Tools](./Module-5-Integrations-Advanced/README.md)
+Integrations with Suricata, ELK, MISP, TheHive, and broader SOC data flows.
 
-### [Module 6: Scaling, Automation & Career](./Module-6-Scaling-Automation/)
-Scale Wazuh for enterprise use and automate SOC operations.
+### [Module 6: Scaling and Automation](./Module-6-Scaling-Automation/README.md)
+Enterprise architecture, clustering, automation, and operational scaling.
 
-**Topics:** Multi-node Setup, Docker/Kubernetes, Ansible Automation, SOC Career Path
+## Recommended Study Method
 
-## 🎓 Best Practices for Students
+1. Read the module README first.
+2. Study theory before running labs.
+3. Keep notes on commands, ports, configs, and troubleshooting steps.
+4. Build a small lab and reuse it across modules.
+5. Revisit earlier modules when later topics feel abstract.
 
-### 📝 Learning Approach
-1. **Read Theory First**: Understand concepts before hands-on practice
-2. **Take Notes**: Document important commands, configurations, and concepts
-3. **Practice Regularly**: Complete labs and exercises thoroughly
-4. **Build Incrementally**: Don't skip modules - each builds on previous knowledge
-5. **Experiment**: Try variations of commands and configurations
+## Lab Baseline
 
-### 🛠️ Lab Environment Setup
-- **Virtual Machines**: Use VirtualBox/VMware for isolated testing
-- **Cloud Instances**: AWS/Azure/GCP free tiers for cloud labs
-- **Local Environment**: Docker for containerized deployments
-- **Test Networks**: Create safe test environments
+For the smoothest learning experience, use:
+- 8 GB RAM minimum, 16 GB recommended
+- 50 GB or more free storage
+- One Linux VM for Wazuh server components
+- One Windows endpoint and one Linux endpoint for agent testing
+- VirtualBox, VMware, or a small cloud lab
 
-### 📊 Progress Tracking
-- ✅ Mark completed sections
-- 📝 Note important commands and configurations
-- 🔄 Review previous modules before starting new ones
-- 📈 Track your learning progress
+## Best Starting Point
 
-### 🤝 Community & Resources
-- **GitHub Issues**: Report bugs or suggest improvements
-- **Discussions**: Share experiences and ask questions
-- **Contributing**: Help improve the tutorial content
-
-## 🚀 Getting Started
-
-1. **Clone this repository**
-   ```bash
-   git clone <repository-url>
-   cd SOC-Wazuh-Tutorial
-   ```
-
-2. **Start with Module 1**
-   - Read the module overview
-   - Study the theory sections
-   - Complete hands-on labs
-   - Move to the next module
-
-3. **Prerequisites**
-   - Basic Linux/Windows command line knowledge
-   - Understanding of networking concepts
-   - Familiarity with virtualization (optional but recommended)
-
-## 📋 Requirements
-
-### Hardware Requirements
-- **RAM**: Minimum 8GB, Recommended 16GB+
-- **CPU**: Multi-core processor
-- **Storage**: 50GB+ free space
-- **Network**: Stable internet connection
-
-### Software Requirements
-- **Operating Systems**: Linux (Ubuntu/CentOS), Windows 10/11, macOS
-- **Virtualization**: VirtualBox, VMware, or similar
-- **Container Tools**: Docker (optional)
-- **Text Editor**: VS Code, Vim, or any preferred editor
-
-## 🎯 Certification & Career Path
-
-This tutorial prepares you for:
-- **CompTIA Security+**
-- **Certified SOC Analyst (CSA)**
-- **Wazuh Certifications**
-- **Entry-level SOC Analyst positions**
-
-## 📞 Support & Feedback
-
-- **Issues**: [GitHub Issues](https://github.com/your-repo/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-repo/discussions)
-- **Email**: Contact for private questions
-
-## 📄 License
-
-This tutorial is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-**Happy Learning! 🚀**
-
-*Remember: Security is not a product, but a process. Keep learning, keep practicing!*
+Start with [Module-1-SOC-Fundamentals/README.md](./Module-1-SOC-Fundamentals/README.md). If you are new to SIEM or SOC work, do not skip the architecture and lab sections.

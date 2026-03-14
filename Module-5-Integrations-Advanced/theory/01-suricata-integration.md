@@ -567,4 +567,4 @@ curl -X GET "localhost:9200/_search" -H 'Content-Type: application/json' -d'
 
 Now that you understand Suricata integration, let's explore Zeek network analysis framework integration for even deeper network visibility.
 
-**[← Back to Module Overview](../README.md)** | **[Next: Zeek Integration →](./02-zeek-integration.md)**
+**[← Back to Module Overview](../README.md)** | **[Next: ELK Stack Integration →](./03-elk-stack-integration.md)**

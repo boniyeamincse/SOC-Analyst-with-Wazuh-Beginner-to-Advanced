@@ -722,4 +722,4 @@ curl -H "Authorization: Bearer $THEHIVE_API_KEY" \
 
 With your TheHive integration complete, proceed to the final lab to combine all integrations into a comprehensive SOC environment.
 
-**[← Back to Incident Response Theory](./05-incident-response-integration.md)** | **[Next: Comprehensive SOC Stack Lab →](./lab-05-comprehensive-soc-stack.md)**
+**[← Back to Incident Response Theory](../theory/05-incident-response-integration.md)** | **[Next: Comprehensive SOC Stack Lab →](./lab-05-comprehensive-soc-stack.md)**

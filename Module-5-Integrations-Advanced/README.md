@@ -31,12 +31,10 @@ By the end of this module, you will be able to:
 ├── 📄 README.md (This file)
 ├── 📁 theory/
 │   ├── 📄 01-suricata-integration.md
-│   ├── 📄 02-zeek-integration.md
 │   ├── 📄 03-elk-stack-integration.md
 │   ├── 📄 04-threat-intelligence-integration.md
 │   └── 📄 05-incident-response-integration.md
 ├── 📁 labs/
-│   ├── 📄 lab-01-suricata-wazuh-integration.md
 │   ├── 📄 lab-02-elk-stack-setup.md
 │   ├── 📄 lab-03-misp-integration.md
 │   ├── 📄 lab-04-thehive-workflow.md
@@ -149,7 +147,7 @@ You can move to the next module when you:
 
 ### 📞 Support Resources
 
-- **Module Resources**: Check the `/resources/` folder for reference materials
+- **Module Resources**: Check the `resources/` folder for reference materials and architecture patterns
 - **Integration Documentation**: Tool-specific integration guides
 - **Community Forums**: SOC integration discussions and best practices
 - **API References**: Comprehensive API documentation for each tool

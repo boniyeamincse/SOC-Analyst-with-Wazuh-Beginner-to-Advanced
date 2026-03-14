@@ -1030,4 +1030,4 @@ tail -f /var/ossec/logs/ossec.log | grep -i list
 
 With your MISP integration complete, proceed to the next lab to integrate TheHive for comprehensive incident response and case management.
 
-**[← Back to Threat Intelligence Theory](./04-threat-intelligence-integration.md)** | **[Next: TheHive Integration Lab →](./lab-04-thehive-workflow.md)**
+**[← Back to Threat Intelligence Theory](../theory/04-threat-intelligence-integration.md)** | **[Next: TheHive Integration Lab →](./lab-04-thehive-workflow.md)**
